@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Character : GameUnit
 {
+    public Animator anim;
     private IState<Character> currentState;
-    private Animator anim;
     
     private string currentAnim;
     
@@ -35,6 +35,11 @@ public class Character : GameUnit
     }
     public void ChangeAnim(string animName)
     {
+        if (currentAnim == null)
+        {
+            currentAnim = animName;
+            anim.SetTrigger(currentAnim);
+        }
         if (currentAnim != animName)
         {
             anim.ResetTrigger(currentAnim);
