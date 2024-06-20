@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f3b63154-b6d0-47c8-b29a-c564ccab57e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/IdleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/IdleState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PatrolState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PatrolState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Internship_BT4_MoveStopMove-20221110T015023Z-001/Internship_BT4_MoveStopMove/Layers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Internship_BT4_MoveStopMove-20221110T015023Z-001/Internship_BT4_MoveStopMove/Layers.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Internship_BT4_MoveStopMove-20221110T015023Z-001/Internship_BT4_MoveStopMove/Materials/Layers.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Internship_BT4_MoveStopMove-20221110T015023Z-001/Internship_BT4_MoveStopMove/Materials/Layers.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +20,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Data/ShieldData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/DataStruct.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Equipments/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Equipments/WeaponModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/ManagerSO.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -103,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718869523002</updated>
       <workItem from="1718869530229" duration="679000" />
-      <workItem from="1718870522023" duration="4681000" />
+      <workItem from="1718870522023" duration="7351000" />
     </task>
     <servers />
   </component>

@@ -18,5 +18,10 @@ public class GameUnit : MonoBehaviour
         }
     }
 
+    public void OnDespawn()
+    {
+        SimplePool.Despawn(this);
+    }
+
     public PoolType poolType;
 }
