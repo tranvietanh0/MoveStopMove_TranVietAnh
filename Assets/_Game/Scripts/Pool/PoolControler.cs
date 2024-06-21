@@ -145,7 +145,8 @@ public enum PoolType
 {
     None = 0,
     Weapon = 1,
-    Bot = 2
+    Bot = 2,
+    Skin = 3
 }
 
 

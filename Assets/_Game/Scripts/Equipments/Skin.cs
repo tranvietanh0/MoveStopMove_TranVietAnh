@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shield : GameUnit
+public class Skin : GameUnit
 {
     
 }

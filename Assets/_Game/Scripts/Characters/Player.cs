@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class Player : Character
 {
@@ -11,6 +12,8 @@ public class Player : Character
     [SerializeField] private float rotateSpeed = 100f;
     [SerializeField] private Transform shieldHand;
     [SerializeField] private Transform weaponHand;
+    [SerializeField] private Transform hairPos;
+    [SerializeField] private SkinnedMeshRenderer pantSkin;
 
     private IState<Player> currentState;
     private float m_horizontal;
@@ -61,6 +64,10 @@ public class Player : Character
     public void OnWeapon()
     {
         WeaponSpawnManager.Ins.SpawnPlayerWeaponModel(weaponHand, 0);
+        Debug.Log(shieldHand);
+        SkinSpawnManager.Ins.SpawnShieldOfPlayer(shieldHand, 0);
+        SkinSpawnManager.Ins.SpawnHairOfPlayer(hairPos, 0);
+        SkinSpawnManager.Ins.SetPantOfPlayer(pantSkin, 0);
     }
     public void ChangeState(IState<Player> state)
     {

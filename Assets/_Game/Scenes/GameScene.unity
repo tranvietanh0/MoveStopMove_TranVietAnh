@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &27195097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6473791464006618733, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
+  m_PrefabInstance: {fileID: 1986232806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &53723559
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 53723559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -196,7 +201,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d8b71fcb268085c4a98ee855ef7b076f, type: 2}
   - {fileID: 11400000, guid: 605256c6f58b68047b364eb9475b00f0, type: 2}
   - {fileID: 11400000, guid: a338d77cb344e6b4d81aba5cb894ab7f, type: 2}
-  SOShieldLists: []
+  SOShieldLists:
+  - {fileID: 11400000, guid: 38e18bd97f5bdde4a8b10e12e2f0cbf5, type: 2}
+  - {fileID: 11400000, guid: b0657348c7b3c674698427e594854d96, type: 2}
+  SOHairLists:
+  - {fileID: 11400000, guid: 1620c3664d4cbec489f69ed177b4465f, type: 2}
+  - {fileID: 11400000, guid: 9085d3581ee72034288c5972121517ac, type: 2}
+  - {fileID: 11400000, guid: a484222a1c45d4249bf1453eedee034a, type: 2}
+  - {fileID: 11400000, guid: e56ce896a8dfeeb4a841fa779038f4aa, type: 2}
+  - {fileID: 11400000, guid: 25cb4e3132eca88479fc95f5dcbacc03, type: 2}
+  - {fileID: 11400000, guid: c19e1895ec1ad6942a564555a5f0d5dc, type: 2}
+  - {fileID: 11400000, guid: 1cb1f7f4afde2354c9fdacf78892b633, type: 2}
+  - {fileID: 11400000, guid: 92d08152fa4e5284ba946553bb563e9a, type: 2}
+  - {fileID: 11400000, guid: a86fbe901f72f894d8b2200efa169da5, type: 2}
+  - {fileID: 11400000, guid: 20fde1722f15b5742b65e9778cc5cefe, type: 2}
+  SOPantLists:
+  - {fileID: 11400000, guid: 0656ccb2f7edff84f98a0291f30861dd, type: 2}
+  - {fileID: 11400000, guid: f57d49b4380a5d445a989f9173013a30, type: 2}
+  - {fileID: 11400000, guid: 6579c7d579b4c5049a08df79f76c1e0e, type: 2}
+  - {fileID: 11400000, guid: 1cf6a99a43d09b34c8048d3ace3ccb49, type: 2}
+  - {fileID: 11400000, guid: 8ab30ae5e6664854ea3941ab4f1aec4e, type: 2}
+  - {fileID: 11400000, guid: 9d9cfca17283a354ead9742f3db1f9e4, type: 2}
+  - {fileID: 11400000, guid: ff254a3f44a69ee4697e12b477505656, type: 2}
+  - {fileID: 11400000, guid: 22c65d109f1319149a043f126ed163c5, type: 2}
+  - {fileID: 11400000, guid: a0ec8e03b61ff0140b7ef922d743963f, type: 2}
 --- !u!4 &162710207
 Transform:
   m_ObjectHideFlags: 0
@@ -245,7 +273,11 @@ MonoBehaviour:
   - root: {fileID: 1014298191}
     prefab: {fileID: 6063762977780911339, guid: 8f5eba1f153f1424990c2cef5d8cf3af, type: 3}
     amount: 10
-    collect: 0
+    collect: 1
+  - root: {fileID: 648194037}
+    prefab: {fileID: 3889457614118324452, guid: e6d42bccd34aa6447b49dc240b5edafd, type: 3}
+    amount: 10
+    collect: 1
   Particle: []
 --- !u!4 &183690117
 Transform:
@@ -262,7 +294,70 @@ Transform:
   m_Children:
   - {fileID: 1014298191}
   - {fileID: 1728417028}
+  - {fileID: 648194037}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &489976486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489976487}
+  m_Layer: 0
+  m_Name: HairPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489976487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489976486}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.09592551, y: 0.089947075, z: 0.037222438, w: 0.9906172}
+  m_LocalPosition: {x: -0.064190425, y: 0.99297684, z: -0.060197353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 27195097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &648194036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 648194037}
+  m_Layer: 0
+  m_Name: Skin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &648194037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648194036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 183690117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -369,7 +464,7 @@ GameObject:
   - component: {fileID: 764674619}
   - component: {fileID: 764674618}
   m_Layer: 0
-  m_Name: WeaponSpawn
+  m_Name: WeaponSpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,7 +855,7 @@ Transform:
   m_GameObject: {fileID: 1642010175}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -868,6 +963,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!137 &1694162733 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -529177695146175607, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
+  m_PrefabInstance: {fileID: 1986232806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1728417027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1816,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6473791464006618733, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 489976487}
     - targetCorrespondingSourceObject: {fileID: -5420008163957686366, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 53723560}
@@ -1814,6 +1917,8 @@ MonoBehaviour:
   rotateSpeed: 100
   shieldHand: {fileID: 53723560}
   weaponHand: {fileID: 1642010176}
+  hairPos: {fileID: 489976487}
+  pantSkin: {fileID: 1694162733}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
