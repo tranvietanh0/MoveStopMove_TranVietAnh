@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: candy_2Data
+  m_Name: Axe_0Data
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: -908554139424067757, guid: 0525b4103926b6e419338c2729bb900e, type: 3}
+  weaponPrefab: {fileID: 1832302417148882945, guid: 919be89456057ca4690e479c75046932, type: 3}
+  weaponModel: {fileID: 6491710358492690258, guid: b4974f099fa3bc443ac7ef4058aa4475, type: 3}
+  id: 1

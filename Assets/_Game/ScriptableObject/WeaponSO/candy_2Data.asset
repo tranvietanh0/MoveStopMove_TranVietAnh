@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: HammerData
+  m_Name: candy_2Data
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 3664502489197128116, guid: 5453f0290bb5f8448b7885b27f9ab69a, type: 3}
+  weaponPrefab: {fileID: -908554139424067757, guid: 0525b4103926b6e419338c2729bb900e, type: 3}
+  weaponModel: {fileID: 7742836864555840633, guid: 9c8db2bf0687baf4c9258266872afabb, type: 3}
+  id: 6

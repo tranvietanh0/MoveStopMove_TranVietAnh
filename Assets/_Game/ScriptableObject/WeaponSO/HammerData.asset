@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: Axe_0Data
+  m_Name: HammerData
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 1832302417148882945, guid: 919be89456057ca4690e479c75046932, type: 3}
+  weaponPrefab: {fileID: 3664502489197128116, guid: 5453f0290bb5f8448b7885b27f9ab69a, type: 3}
+  weaponModel: {fileID: 1237133491556259274, guid: 184b85cfb12d61d49b5277704bde4050, type: 3}
+  id: 8

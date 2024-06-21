@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: candy_4Data
+  m_Name: ZData
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: -8903242427513572561, guid: b051156159dfd0143a0f37c9e7c14c57, type: 3}
+  weaponPrefab: {fileID: -1926592596616668873, guid: 9d90b5fc0c288ae4a87109ab0ff66364, type: 3}
+  weaponModel: {fileID: 8039077335721860662, guid: 9e8400d9fe0e8ae4d984b6ee1614d3b3, type: 3}
+  id: 11

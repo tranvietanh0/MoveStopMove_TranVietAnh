@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: uziData
+  m_Name: KnifeData
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: -8571816612903194581, guid: b43f21373deea734397bfe7cb444e2c6, type: 3}
+  weaponPrefab: {fileID: 5116765514371176386, guid: 5e6cc7109fe1d914d83657bcd18665b8, type: 3}
+  weaponModel: {fileID: 2324755447760122692, guid: 339fbf0ef11a76340b5fa17f30c0e2c2, type: 3}
+  id: 9

@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: ZData
+  m_Name: boomerangData
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: -1926592596616668873, guid: 9d90b5fc0c288ae4a87109ab0ff66364, type: 3}
+  weaponPrefab: {fileID: 2422916479324136881, guid: e248f78288d00734ea549bdf6df23302, type: 3}
+  weaponModel: {fileID: -5830490207434739383, guid: c9cfa613dc386ec43996b9a930cad67e, type: 3}
+  id: 3

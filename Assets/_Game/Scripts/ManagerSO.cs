@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class ManagerSO : Singleton<ManagerSO>
 {
-    public List<SOWeapon> SOweaponLists = new List<SOWeapon>();
+    public List<SOWeapon> SOWeaponLists = new List<SOWeapon>();
+    public List<SOShield> SOShieldLists = new List<SOShield>();
 }

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56de24e08fd3d8c46805a46f81a9ce2d, type: 3}
-  m_Name: Axe_1Data
+  m_Script: {fileID: 11500000, guid: dd1eea2efc7103441aed956471f8741e, type: 3}
+  m_Name: ShieldData
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 5234889599642275209, guid: 96798ea349420794c9ee3973d5ad3eb3, type: 3}
+  shieldPrefab: {fileID: 7343748498112010174, guid: 348553dc75037094ba81e3cc26206cb3, type: 3}

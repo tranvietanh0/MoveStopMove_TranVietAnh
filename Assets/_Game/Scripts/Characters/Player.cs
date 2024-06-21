@@ -9,6 +9,8 @@ public class Player : Character
     [SerializeField] private CharacterController characterController;
     [SerializeField] private float moveSpeed = 20f;
     [SerializeField] private float rotateSpeed = 100f;
+    [SerializeField] private Transform shieldHand;
+    [SerializeField] private Transform weaponHand;
 
     private IState<Player> currentState;
     private float m_horizontal;
@@ -24,6 +26,7 @@ public class Player : Character
     private void Start()
     {
         currentState = new IdleState();
+        this.OnWeapon();
     }
 
     private void Update()
@@ -53,6 +56,11 @@ public class Player : Character
             isMoving = false;
         }
         
+    }
+
+    public void OnWeapon()
+    {
+        WeaponSpawnManager.Ins.SpawnPlayerWeaponModel(weaponHand, 0);
     }
     public void ChangeState(IState<Player> state)
     {

@@ -143,12 +143,9 @@ public enum ParticleType
 
 public enum PoolType
 {
-    None,
-
-    Bullet_1,
-    Bullet_2,
-    Bullet_3,
-    Bullet_4,
+    None = 0,
+    Weapon = 1,
+    Bot = 2
 }
 
 
