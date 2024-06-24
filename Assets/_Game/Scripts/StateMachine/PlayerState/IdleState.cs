@@ -12,9 +12,16 @@ public class IdleState : IState<Player>
 
     public void OnExecute(Player t)
     {
+        Debug.Log(t.IsMoving);
         if (t.IsMoving)
         {
             t.ChangeState(new RunState());
+        }
+
+        if (t.IsAttack)
+        {
+            // t.IsMoving = false;
+            t.ChangeState(new AttackState());
         }
     }
 

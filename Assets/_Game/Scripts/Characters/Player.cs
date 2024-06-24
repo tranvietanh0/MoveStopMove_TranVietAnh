@@ -15,10 +15,24 @@ public class Player : Character
     [SerializeField] private Transform hairPos;
     [SerializeField] private SkinnedMeshRenderer pantSkin;
 
+    private Transform targetPosition;
     private IState<Player> currentState;
     private float m_horizontal;
     private float m_vertical;
     private bool isMoving = false;
+    private bool isAttack = false;
+
+    public Transform TargetPosition
+    {
+        get => targetPosition;
+        set => targetPosition = value;
+    }
+    public bool IsAttack
+    {
+        get => isAttack;
+        set => isAttack = value;
+    }
+
 
     public bool IsMoving
     {
@@ -41,7 +55,7 @@ public class Player : Character
         Move();
     }
 
-    private void Move()
+    public void Move()
     {
         m_horizontal = variableJoystick.Horizontal;
         m_vertical = variableJoystick.Vertical;
@@ -64,10 +78,14 @@ public class Player : Character
     public void OnWeapon()
     {
         WeaponSpawnManager.Ins.SpawnPlayerWeaponModel(weaponHand, 0);
-        Debug.Log(shieldHand);
         SkinSpawnManager.Ins.SpawnShieldOfPlayer(shieldHand, 0);
         SkinSpawnManager.Ins.SpawnHairOfPlayer(hairPos, 0);
         SkinSpawnManager.Ins.SetPantOfPlayer(pantSkin, 0);
+    }
+
+    public void Attack()
+    {
+        WeaponSpawnManager.Ins.SpawnWeaponToAttack(targetPosition, 0, weaponHand);
     }
     public void ChangeState(IState<Player> state)
     {

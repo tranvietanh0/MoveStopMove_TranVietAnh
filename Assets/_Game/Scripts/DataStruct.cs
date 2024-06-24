@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Const
 {
+    public const string BOT_TAG = "Bot";
+    
     public const string IDLE_ANIM = "Idle";
     public const string RUN_ANIM = "Run";
     public const string ATTACK_ANIM = "Attack";
