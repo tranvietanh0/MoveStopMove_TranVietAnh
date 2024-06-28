@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Cache 
 {
-    private static Dictionary<Collider, Character> characters = new Dictionary<Collider, Character>();
+    private static Dictionary<Collider, Weapon> weapons = new Dictionary<Collider, Weapon>();
 
-    public static Character GetCharacter(Collider collider)
+    public static Weapon GetWeapon(Collider collider)
     {
-        if (!characters.ContainsKey(collider))
+        if (!weapons.ContainsKey(collider))
         {
-            characters.Add(collider, collider.GetComponent<Character>());
+            var weapon = collider.GetComponent<Weapon>();
+            if (weapon == null)
+            {
+                Debug.LogError($"Collider {collider.name} does not have a Character component.");
+                return null;
+            }
+            weapons.Add(collider, weapon);
         }
 
-        return characters[collider];
+        return weapons[collider];
     } 
     
     private static Dictionary<Collider, Bot> bots = new Dictionary<Collider, Bot>();
@@ -22,7 +28,13 @@ public class Cache
     {
         if (!bots.ContainsKey(collider))
         {
-            bots.Add(collider, collider.GetComponent<Bot>());
+            var bot = collider.GetComponent<Bot>();
+            if (bot == null)
+            {
+                Debug.LogError($"Collider {collider.name} does not have a Bot component.");
+                return null;
+            }
+            bots.Add(collider, bot);
         }
 
         return bots[collider];
@@ -34,7 +46,13 @@ public class Cache
     {
         if (!players.ContainsKey(collider))
         {
-            players.Add(collider, collider.GetComponent<Player>());
+            var player = collider.GetComponent<Player>();
+            if (player == null)
+            {
+                Debug.LogError($"Collider {collider.name} does not have a Player component.");
+                return null;
+            }
+            players.Add(collider, player);
         }
 
         return players[collider];

@@ -30,7 +30,7 @@ public class WeaponSpawnManager : Singleton<WeaponSpawnManager>
         Weapon weapon = SimplePool.Spawn<Weapon>(GetCurrentWeapon(id).weaponPrefab, weapondHand.position,
             Quaternion.identity);
         weapon.SetTargetPos(targetPos);
-        
+
     }
     
 }

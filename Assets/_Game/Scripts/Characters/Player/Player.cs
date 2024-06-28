@@ -14,7 +14,9 @@ public class Player : Character
     [SerializeField] private Transform weaponHand;
     [SerializeField] private Transform hairPos;
     [SerializeField] private SkinnedMeshRenderer pantSkin;
+    [SerializeField] private float rotationSpeed = 100f;
 
+    [SerializeField] private Weapon weapon;
     private Transform targetPosition;
     private IState<Player> currentState;
     private float m_horizontal;
@@ -45,6 +47,13 @@ public class Player : Character
         currentState = new IdleState();
         this.OnWeapon();
     }
+    private void OnDestroy()
+    {
+        if (weapon != null)
+        {
+            weapon.OnWeaponHit -= HandleWeaponHit;
+        }
+    }
 
     private void Update()
     {
@@ -53,6 +62,12 @@ public class Player : Character
             currentState.OnExecute(this);
         }
         Move();
+    }
+
+    public void HandleWeaponHit()
+    {
+        Debug.Log("handle");
+        this.transform.localScale *= 1.2f;
     }
 
     public void Move()
@@ -85,7 +100,19 @@ public class Player : Character
 
     public void Attack()
     {
+        ChangeRotation(targetPosition, rotationSpeed);
         WeaponSpawnManager.Ins.SpawnWeaponToAttack(targetPosition, 0, weaponHand);
+        if (weapon != null)
+        {
+            Debug.Log("Assign");
+            weapon.OnWeaponHit += HandleWeaponHit;
+        }
+    }
+
+    public void ChangeScale()
+    {
+        Vector3 scaleChange = new Vector3(1.2f, 1.2f, 1.2f);
+        this.transform.localScale = Vector3.Scale(transform.localScale, scaleChange);
     }
     public void ChangeState(IState<Player> state)
     {

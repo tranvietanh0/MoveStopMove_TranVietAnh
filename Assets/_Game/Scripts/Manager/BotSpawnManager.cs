@@ -14,11 +14,13 @@ public class BotSpawnManager : Singleton<BotSpawnManager>
 
     private void OnSpawnBot()
     {
-        int indexPos = Random.Range(0, spawnPositions.Count);
-        Bot botPool = SimplePool.Spawn<Bot>(botPrefab, spawnPositions[indexPos].position, Quaternion.identity);
-        Debug.Log(indexPos);
-        Debug.Log("bot ne");
-        
+        for (int indexPos = 0; indexPos < spawnPositions.Count; indexPos++)
+        {
+            Bot botPool = SimplePool.Spawn<Bot>(botPrefab, spawnPositions[indexPos].position, Quaternion.identity);
+            Debug.Log(indexPos);
+            Debug.Log("bot ne");
+        }
+
         // botPool.OnInit();
     }
 }
