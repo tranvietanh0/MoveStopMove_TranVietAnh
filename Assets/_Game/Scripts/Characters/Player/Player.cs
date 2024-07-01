@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -15,37 +16,28 @@ public class Player : Character
     [SerializeField] private Transform hairPos;
     [SerializeField] private SkinnedMeshRenderer pantSkin;
     [SerializeField] private float rotationSpeed = 100f;
-
     [SerializeField] private Weapon weapon;
+    
     private Transform targetPosition;
     private IState<Player> currentState;
     private float m_horizontal;
     private float m_vertical;
     private bool isMoving = false;
     private bool isAttack = false;
+    private bool isDead = false;
+    private List<Weapon> weapons = new List<Weapon>();
+    private bool isMove = false;
 
-    public Transform TargetPosition
-    {
-        get => targetPosition;
-        set => targetPosition = value;
-    }
-    public bool IsAttack
-    {
-        get => isAttack;
-        set => isAttack = value;
-    }
-
-
-    public bool IsMoving
-    {
-        get => isMoving;
-        set => isMoving = value;
-    }
+    public bool IsMove { get => isMove; set => isMove = value; } 
+    public bool IsDead { get => isDead; set => isDead = value; } public Transform TargetPosition { get => targetPosition; set => targetPosition = value; }
+    public bool IsAttack { get => isAttack; set => isAttack = value; }
+    public bool IsMoving { get => isMoving; set => isMoving = value; }
+    
 
     private void Start()
     {
         currentState = new IdleState();
-        this.OnWeapon();
+        OnWeapon();
     }
     private void OnDestroy()
     {
@@ -66,46 +58,48 @@ public class Player : Character
 
     public void HandleWeaponHit()
     {
-        Debug.Log("handle");
-        this.transform.localScale *= 1.2f;
+        this.transform.localScale *= 1.1f;
     }
 
     public void Move()
     {
-        m_horizontal = variableJoystick.Horizontal;
-        m_vertical = variableJoystick.Vertical;
-        Vector3 direction = new Vector3(m_horizontal, 0, m_vertical).normalized;
-        if (Mathf.Abs(m_horizontal) > 0.1f || Mathf.Abs(m_vertical) > 0.1f)
+        if (!isMove)
         {
-            isMoving = true;
-            characterController.Move(direction * moveSpeed * Time.deltaTime);
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            TF.rotation = Quaternion.Slerp(TF.rotation, targetRotation, rotateSpeed * Time.deltaTime);
-            
+            m_horizontal = variableJoystick.Horizontal;
+            m_vertical = variableJoystick.Vertical;
+            Vector3 direction = new Vector3(m_horizontal, 0, m_vertical).normalized;
+            if (Mathf.Abs(m_horizontal) > 0.1f || Mathf.Abs(m_vertical) > 0.1f)
+            {
+                isMoving = true;
+                characterController.Move(direction * moveSpeed * Time.deltaTime);
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                TF.rotation = Quaternion.Slerp(TF.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
+            }
+            else
+            {
+                isMoving = false;
+            }
         }
-        else
-        {
-            isMoving = false;
-        }
-        
     }
 
     public void OnWeapon()
     {
-        WeaponSpawnManager.Ins.SpawnPlayerWeaponModel(weaponHand, 0);
-        SkinSpawnManager.Ins.SpawnShieldOfPlayer(shieldHand, 0);
-        SkinSpawnManager.Ins.SpawnHairOfPlayer(hairPos, 0);
-        SkinSpawnManager.Ins.SetPantOfPlayer(pantSkin, 0);
+        WeaponSpawnManager.Ins.SpawnPlayerWeaponModel(weaponHand, 3);
+        SkinSpawnManager.Ins.SpawnShieldOfPlayer(shieldHand, 3);
+        SkinSpawnManager.Ins.SpawnHairOfPlayer(hairPos, 3);
+        SkinSpawnManager.Ins.SetPantOfPlayer(pantSkin, 3);
     }
 
     public void Attack()
     {
         ChangeRotation(targetPosition, rotationSpeed);
-        WeaponSpawnManager.Ins.SpawnWeaponToAttack(targetPosition, 0, weaponHand);
-        if (weapon != null)
+        Weapon weaponAttack = WeaponSpawnManager.Ins.SpawnWeaponToAttack(targetPosition, 3, weaponHand);
+        weapons.Add(weaponAttack);
+        if (weaponAttack != null)
         {
             Debug.Log("Assign");
-            weapon.OnWeaponHit += HandleWeaponHit;
+            weaponAttack.OnWeaponHit += HandleWeaponHit;
         }
     }
 
@@ -126,6 +120,18 @@ public class Player : Character
         if (currentState != null)
         {
             currentState.OnEnter(this);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag(Const.WEAPON_TAG))
+        {
+            Weapon weaponAttack = Cache.GetWeapon(other);
+            if (!weapons.Contains(weaponAttack))
+            {
+                isDead = true;
+            }
         }
     }
 }

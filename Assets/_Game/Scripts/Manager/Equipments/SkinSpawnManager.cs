@@ -46,7 +46,6 @@ public class SkinSpawnManager : Singleton<SkinSpawnManager>
     {
         SOShield shieldOfPlayer = GetCurrentShield(id);
         Skin shieldModelOfPlayer = SimplePool.Spawn<Skin>(shieldOfPlayer.shieldPrefab, shieldHand.position, Quaternion.identity);
-        Debug.Log(shieldOfPlayer.shieldPrefab);
         shieldModelOfPlayer.gameObject.transform.SetParent(shieldHand);
     }
 

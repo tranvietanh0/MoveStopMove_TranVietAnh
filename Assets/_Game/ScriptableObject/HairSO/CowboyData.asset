@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ba6ac400a68e54783935a8001ae208, type: 3}
   m_Name: CowboyData
   m_EditorClassIdentifier: 
-  hairPrefab: {fileID: 4762993733226310367, guid: 1001ada84fe65d2418b55b701a1c4796, type: 3}
+  hairPrefab: {fileID: 8049096343372777137, guid: 7032f68f9454a2341ae56bffda97b183, type: 3}
   id: 1

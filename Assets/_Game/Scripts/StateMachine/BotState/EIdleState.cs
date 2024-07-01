@@ -16,11 +16,7 @@ public class EIdleState : IState<Bot>
 
     public void OnExecute(Bot t)
     {
-        // Debug.Log("vl");
         timer += Time.deltaTime;
-        // Debug.Log(timer);
-        // Debug.Log(delayTime);
-        // Debug.Log(Mathf.Abs(timer - delayTime));
         if (Mathf.Abs(timer - delayTime) <= 0.1f)
         {
             t.ChangeState(new EPatrolState());
@@ -29,6 +25,11 @@ public class EIdleState : IState<Bot>
         if (t.IsAttack)
         {
             t.ChangeState(new EAttackState());
+        }
+
+        if (t.IsDead)
+        {
+            t.ChangeState(new EDeadState());
         }
     }
 

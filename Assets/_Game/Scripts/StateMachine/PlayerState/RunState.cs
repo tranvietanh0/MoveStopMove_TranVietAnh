@@ -7,6 +7,7 @@ public class RunState : IState<Player>
     public void OnEnter(Player t)
     {
         t.ChangeAnim(Const.RUN_ANIM);
+        t.IsMove = false;
     }
 
     public void OnExecute(Player t)
@@ -15,6 +16,11 @@ public class RunState : IState<Player>
         if (!t.IsMoving)
         {
             t.ChangeState(new IdleState());
+        }
+
+        if (t.IsDead)
+        {
+            t.ChangeState(new DeadState());
         }
     }
 

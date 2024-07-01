@@ -11,6 +11,7 @@ public class EPatrolState : IState<Bot>
     private Vector3 newPos;
     public void OnEnter(Bot t)
     {
+        t.agent.isStopped = false;
         wanderRadius = 10f;
         wanderInterval = 5f;
         t.ChangeAnim(Const.RUN_ANIM);
@@ -27,6 +28,11 @@ public class EPatrolState : IState<Bot>
         if (t.IsAttack)
         {
             t.ChangeState(new EAttackState());
+        }
+
+        if (t.IsDead)
+        {
+            t.ChangeState(new EDeadState());
         }
     }
 

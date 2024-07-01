@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: candy_2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f45aa9b66c9c81a4cac7e66fe618e58f, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f45aa9b66c9c81a4cac7e66fe618e58f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -80,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056778f8bdbf2f24c8849533fe694942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 1
+  poolType: 12
   speed: 5
 --- !u!65 &-1465945930389021060
 BoxCollider:

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f3b63154-b6d0-47c8-b29a-c564ccab57e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Materials/Red.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Arrow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Axe_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Axe_0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Axe_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/Axe_1.prefab" afterDir="false" />
@@ -19,7 +18,15 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/candy_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/candy_4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/knife.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/uzi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/AttackWeapon/uzi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Bot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Bot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Cowboy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Cowboy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Crown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Crown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Ear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Ear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat_Cap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat_Cap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat_Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Hat_Yellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Horn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/Horn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/headphone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Hair/headphone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Arrow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Axe_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Axe_0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Axe_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Axe_1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Hammer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/Hammer.prefab" afterDir="false" />
@@ -31,20 +38,29 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/candy_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/candy_4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/knife.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/uzi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/ModelWeapon/uzi.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Pant.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Shield/Khien.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Shield/Khien.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Shield/Shield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Shield/Shield.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AttackRange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/AttackRange.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/ScriptableObject/HairSO/CowboyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/ScriptableObject/HairSO/CowboyData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Cache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Cache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Bot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Bot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Bot/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Bot/Bot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Characters/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DataStruct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/DataStruct.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Equipments/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Equipments/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/BotSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/BotSpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/Equipments/SkinSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/Equipments/SkinSpawnManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/Equipments/WeaponSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Manager/Equipments/WeaponSpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolControler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolControler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EAttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EIdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EPatrolState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EPatrolState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/DeadState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/DeadState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/RunState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +83,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Equipments/WeaponModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Manager/BotSpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/ManagerSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EDeadState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/BotState/EPatrolState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/StateMachine/PlayerState/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -156,7 +173,18 @@
       <workItem from="1719402369171" duration="5505000" />
       <workItem from="1719541043084" duration="4255000" />
       <workItem from="1719547276272" duration="9256000" />
-      <workItem from="1719574628926" duration="1756000" />
+      <workItem from="1719574628926" duration="9884000" />
+      <workItem from="1719588354464" duration="8814000" />
+      <workItem from="1719619793341" duration="2671000" />
+      <workItem from="1719625220513" duration="292000" />
+      <workItem from="1719625524975" duration="31000" />
+      <workItem from="1719625574813" duration="58000" />
+      <workItem from="1719625647707" duration="74000" />
+      <workItem from="1719625731935" duration="31000" />
+      <workItem from="1719626048456" duration="1091000" />
+      <workItem from="1719760566125" duration="1915000" />
+      <workItem from="1719799903088" duration="1497000" />
+      <workItem from="1719833954065" duration="4203000" />
     </task>
     <servers />
   </component>

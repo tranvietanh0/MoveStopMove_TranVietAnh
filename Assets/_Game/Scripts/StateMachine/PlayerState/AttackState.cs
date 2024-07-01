@@ -5,12 +5,14 @@ using UnityEngine;
 public class AttackState : IState<Player>
 {
     private float attackeDelayTime;
+    private float timer;
     public void OnEnter(Player t)
     {
         t.IsAttack = true;
-        attackeDelayTime = 3f;
+        attackeDelayTime = 0.6f;
         t.ChangeAnim(Const.ATTACK_ANIM);
         t.Attack();
+        t.IsMove = true;
     }
 
     public void OnExecute(Player t)
@@ -18,6 +20,7 @@ public class AttackState : IState<Player>
         if (t.IsMoving)
         {
             t.IsAttack = false;
+            // t.IsMove = true;
             t.ChangeState(new IdleState());
         }
         else
@@ -30,6 +33,11 @@ public class AttackState : IState<Player>
             }
             t.IsAttack = false;
             t.ChangeState(new IdleState());
+        }
+
+        if (t.IsDead)
+        {
+            t.ChangeState(new DeadState());
         }
     }
 

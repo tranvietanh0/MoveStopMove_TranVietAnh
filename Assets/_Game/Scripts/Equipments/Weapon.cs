@@ -39,12 +39,11 @@ public class Weapon : GameUnit
     }
 
     
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(Const.BOT_TAG))
-        {
-            Debug.Log("cham bot r");
-            OnWeaponHit?.Invoke();
-        }
-    }
+    // public void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag(Const.BOT_TAG))
+    //     {
+    //         OnWeaponHit?.Invoke();
+    //     }
+    // }
 }

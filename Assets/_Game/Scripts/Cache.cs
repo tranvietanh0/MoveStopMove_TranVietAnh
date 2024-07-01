@@ -42,7 +42,7 @@ public class Cache
     
     private static Dictionary<Collider, Player> players = new Dictionary<Collider, Player>();
 
-    public static Player GetStair(Collider collider)
+    public static Player GetPlayer(Collider collider)
     {
         if (!players.ContainsKey(collider))
         {

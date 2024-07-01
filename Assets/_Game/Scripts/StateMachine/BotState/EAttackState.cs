@@ -11,6 +11,7 @@ public class EAttackState : IState<Bot>
         t.IsAttack = true;
         t.ChangeAnim(Const.ATTACK_ANIM);
         t.Attack();
+        t.agent.isStopped = true;
     }
 
     public void OnExecute(Bot t)
@@ -23,6 +24,10 @@ public class EAttackState : IState<Bot>
 
         t.IsAttack = false;
         t.ChangeState(new EIdleState());
+        if (t.IsDead)
+        {
+            t.ChangeState(new EDeadState());
+        }
     }
 
     public void OnExit(Bot t)

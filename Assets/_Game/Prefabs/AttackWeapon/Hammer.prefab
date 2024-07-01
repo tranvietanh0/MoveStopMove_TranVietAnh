@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hammer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 90389cac50942cb4ca38583e6531094a, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90389cac50942cb4ca38583e6531094a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -80,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 056778f8bdbf2f24c8849533fe694942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 1
+  poolType: 28
   speed: 5
 --- !u!65 &3924255800221473399
 BoxCollider:

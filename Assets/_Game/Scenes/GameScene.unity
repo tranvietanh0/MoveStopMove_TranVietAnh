@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 162710207}
   - component: {fileID: 162710206}
   m_Layer: 0
-  m_Name: ScriptableObjectManager
+  m_Name: ManagerSO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,10 +527,6 @@ MonoBehaviour:
     prefab: {fileID: 6063762977780911339, guid: 8f5eba1f153f1424990c2cef5d8cf3af, type: 3}
     amount: 10
     collect: 1
-  - root: {fileID: 648194037}
-    prefab: {fileID: 3889457614118324452, guid: e6d42bccd34aa6447b49dc240b5edafd, type: 3}
-    amount: 10
-    collect: 1
   - root: {fileID: 1728417028}
     prefab: {fileID: 6340734469104686657, guid: 3ebb1c780d87d104ca859d6d3e938e61, type: 3}
     amount: 1
@@ -643,7 +639,7 @@ Transform:
   m_GameObject: {fileID: 214195422}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.4, y: 0, z: 41}
+  m_LocalPosition: {x: 18.4, y: 0, z: 20.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -833,7 +829,7 @@ Transform:
   m_GameObject: {fileID: 407971782}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.4, y: 0, z: -38.6}
+  m_LocalPosition: {x: -21.9, y: 0, z: -19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1538,7 +1534,7 @@ Transform:
   m_GameObject: {fileID: 714206930}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.3, y: 0.695, z: 44.6}
+  m_LocalPosition: {x: -20.5, y: 0, z: 20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1862,7 +1858,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3230,7 +3226,7 @@ Transform:
   m_GameObject: {fileID: 1555699089}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.6, y: 0, z: -38.9}
+  m_LocalPosition: {x: 18.4, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4195,7 +4191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b83723eb607bdc43b08830f596754a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolType: 0
+  poolType: 2
   anim: {fileID: 1986232808}
   variableJoystick: {fileID: 1126848460}
   characterController: {fileID: 2113837049}
@@ -4205,6 +4201,8 @@ MonoBehaviour:
   weaponHand: {fileID: 1642010176}
   hairPos: {fileID: 489976487}
   pantSkin: {fileID: 1694162733}
+  rotationSpeed: 100
+  weapon: {fileID: 0}
 --- !u!114 &2113837051
 MonoBehaviour:
   m_ObjectHideFlags: 0
