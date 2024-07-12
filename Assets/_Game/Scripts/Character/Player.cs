@@ -26,6 +26,7 @@ public class Player : Character
     {
         this.speed         = 10f;
         this.rotationSpeed = 100f;
+        this.ChangeSkin();
     }
     
     public void Move()
@@ -45,5 +46,13 @@ public class Player : Character
         {
             ChangeAnim(Const.ANIM_IDLE);
         }
+    }
+    
+    public void ChangeSkin()
+    {
+        ChangeWeapon(WeaponType.Arrow);
+        ChangeHat(HairType.Hat);
+        ChangePant(PantType.Batman);
+        ChangeShield(ShieldType.Shield_1);
     }
 }
