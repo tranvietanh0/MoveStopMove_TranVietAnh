@@ -370,6 +370,7 @@ public class Character : GameUnit
         int currentLevel = CalculateLevel(characterScore);
         if (characterScore >= currentLevel * (currentLevel + 1))
         {
+            Debug.Log("vkl");
             UpSize(Constants.UP_SIZE);
         }
     }
