@@ -10,11 +10,11 @@ public class Player : Character
     [SerializeField] private CombatText combatTextPrefab;
 
     private Character targetLocking;
-    private string killerName;
-    private int coin;
+    private string    killerName;
+    private int       coin;
 
     public string KillerName { get { return killerName; } }
-    public int Coin { get { return coin; } set { coin = value; } }
+    public int    Coin       { get { return coin; } set { coin = value; } }
 
     private void Start()
     {
