@@ -1,0 +1,75 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIFail : UICanvas
+{
+    [SerializeField] private Button          mainMenuBtn;
+    [SerializeField] private TextMeshProUGUI coinText;
+    [SerializeField] private TextMeshProUGUI nextZone;
+    [SerializeField] private TextMeshProUGUI currentZone;
+    [SerializeField] private TextMeshProUGUI rankingText;
+    [SerializeField] private TextMeshProUGUI killerName;
+    private void Start()
+    {
+        mainMenuBtn.onClick.AddListener(OnMainMenu);
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(DelayActiveButton());
+
+        int currentLevel = UserDataManager.Instance.GetCurrentLevel();
+        UpdateTextCurrentZone(currentLevel);
+        UpdateTextNextZone(currentLevel);
+        UpdateRankingText(LevelManager.Instance.GetAliveEnemy());
+        UpdateKillerName(LevelManager.Instance.GetKillerName());
+    }
+
+    private void OnDisable()
+    {
+        mainMenuBtn.gameObject.SetActive(false);
+    }
+
+    public void OnMainMenu()
+    {
+        SoundManager.Instance.PlaySound(SoundType.ButtonClick);
+        UIManager.Instance.CloseAll();
+        UIManager.Instance.OpenUI<UIMainMenu>();
+        GameManager.Instance.EnterMainMenu();
+    }
+
+    public void UpdateCoinDisplay(int coin)
+    {
+        coinText.text = coin.ToString();
+    }
+
+    private void UpdateTextCurrentZone(int currentLevel)
+    {
+        currentZone.text = $"ZONE: {currentLevel}";
+    }
+
+    private void UpdateTextNextZone(int currentLevel)
+    {
+        nextZone.text = $"ZONE: {currentLevel + 1}";
+    }
+
+    private void UpdateRankingText(int number)
+    {
+        rankingText.text = $"#{number}";
+    }
+
+    private void UpdateKillerName(string name)
+    {
+        killerName.text = name;
+    }
+
+    IEnumerator DelayActiveButton()
+    {
+        yield return Cache.GetWFS(2f);
+        mainMenuBtn.gameObject.SetActive(true);
+    }
+}

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MiniPool<T> where T : Component
 {
-    private Queue<T> pools = new Queue<T>();
-    private List<T> listActives = new List<T>();
+    private Queue<T> pools       = new Queue<T>();
+    private List<T>  listActives = new List<T>();
 
-    T prefab;
+    T         prefab;
     Transform parent;
 
     public void OnInit(T prefab, int amount, Transform parent = null)
@@ -70,4 +70,8 @@ public class MiniPool<T> where T : Component
         }
     }
 
+    public List<T> GetActiveObjects()
+    {
+        return new List<T>(listActives);
+    }
 }

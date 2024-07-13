@@ -1,58 +1,189 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class Player : Character
 {
-    [SerializeField] private FloatingJoystick    joystick;
-    [SerializeField] private CharacterController characterController;
-    [SerializeField] private float               speed;
-    [SerializeField] private float               rotationSpeed;
-    
-    private float horizontal;
-    private float vertical;
+    [SerializeField] private float      speed = 6f;
+    [SerializeField] private CombatText combatTextPrefab;
+
+    private Character targetLocking;
+    private string killerName;
+    private int coin;
+
+    public string KillerName { get { return killerName; } }
+    public int Coin { get { return coin; } set { coin = value; } }
 
     private void Start()
     {
-        this.OnInit();
+        this.Score = 0;
+        SetSize(Constants.ORIGINAL_SIZE);
     }
-    private void Update()
+
+    protected override void Update()
     {
-        this.Move();
+        if (GameManager.Instance.IsGameState(GameState.GamePlay))
+        {
+            //neu co target va target ko nam trong attack range
+            if (currentTarget != null && IsOutOfAttackRange(currentTarget))
+            {
+                ResetTarget();
+            }
+
+            base.Update();
+
+            if (IsDead)
+            {
+                GameManager.Instance.ShowRevivePopup();
+                return;
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                ChangeAnim(Constants.ANIM_IDLE);
+            }
+
+            if (Input.GetMouseButton(0) && Vector3.Distance(Joystick.direction, Vector3.zero) > 0.1f)
+            {
+                Move();
+            }
+            else
+            {
+                StopMove();
+            }
+
+            SetLockTarget(); //hien thi khoa muc tieu
+        }
+    }
+
+    private void OnEnable()
+    {
+        UIRevive.reviveEvent += OnRevivePlayer;
+        Level.winGameEvent += OnWinGame;
+    }
+
+    private void OnDisable()
+    {
+        UIRevive.reviveEvent -= OnRevivePlayer;
+        Level.winGameEvent -= OnWinGame;
     }
 
     public override void OnInit()
     {
-        this.speed         = 10f;
-        this.rotationSpeed = 100f;
-        this.ChangeSkin();
+        base.OnInit();
+        coin = 0;
+        Name = UserDataManager.Instance.GetUserName();
+        SetSize(currentSize);
+        ChangeCurrentSkin();
     }
-    
-    public void Move()
-    {
-        horizontal = joystick.Horizontal;
-        vertical   = joystick.Vertical;
-        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f)
+    public void ChangeCurrentSkin()
+    {
+        UserData userData = UserDataManager.Instance.userData;
+
+        int currentWeaponIndex = userData.currentWeaponIndex;
+        int currentHatIndex = userData.currentHatIndex;
+        int currentPantIndex = userData.currentPantIndex;
+        int currentShieldIndex = userData.currentShieldIndex;
+        int currentSetFullIndex = userData.currentSetFullIndex;
+
+        ChangeWeapon((WeaponType)currentWeaponIndex);
+        ChangeHat((HatType)currentHatIndex);
+        ChangePant((PantType)currentPantIndex);
+        ChangeShield((ShieldType)currentShieldIndex);
+        ChangeSetFull((SetFullType)currentSetFullIndex);
+    }
+
+    //move
+    public override void Move()
+    {
+        base.Move();
+        Vector3 nextPoint = Tf.position + Joystick.direction * speed * Time.deltaTime;
+        Tf.position = CheckGround(nextPoint);
+        Tf.rotation = Quaternion.LookRotation(Joystick.direction);
+    }
+
+    public override void UpSize(float size)
+    {
+        base.UpSize(size);
+
+        SoundManager.Instance.PlaySound(SoundType.UpSize);
+    }
+
+    //xu ly hit enemy
+    public override void OnHitVictim(Character attacker, Character victim)
+    {
+        base.OnHitVictim(attacker, victim);
+        killerName = victim.Name;
+        AddCoins(5);
+    }
+
+    public override void AddScore(int score)
+    {
+        base.AddScore(score);
+        Instantiate(combatTextPrefab, Tf).OnInit(score);
+    }
+
+    //goi khi hit enemy
+    private void AddCoins(int value)
+    {
+        coin += value;
+        int dataCoin = UserDataManager.Instance.GetUserCoin();
+        UserDataManager.Instance.UpdateUserCoin(dataCoin += coin);
+    }
+
+    //xu ly event revive
+    private void OnRevivePlayer()
+    {
+        OnInit();
+    }
+
+    //xu ly event win game
+    private void OnWinGame()
+    {
+        StartCoroutine(DelayChangeAnim());
+    }
+
+    //reset khoa muc tieu
+    private void ResetTarget()
+    {
+        currentTarget.DeactiveLockTarget();
+        targetLocking = null;
+        currentTarget = null;
+    }
+
+    //hien thi khoa muc tieu gan nhat
+    private void SetLockTarget()
+    {
+        if (currentTarget != null && !IsOutOfAttackRange(currentTarget))
         {
-            characterController.Move(direction * speed * Time.deltaTime);
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            this.transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-            ChangeAnim(Const.ANIM_RUN);
+            //neu dang co target bi khoa va target do khac currentTarget
+            if (targetLocking != null && targetLocking != currentTarget)
+            {
+                targetLocking.DeactiveLockTarget(); //bo target dang bi khoa
+            }
+
+            if (targetLocking == currentTarget)
+            {
+                return;
+            }
+            currentTarget.ActiveLockTarget(); //khoa target moi
+
+            targetLocking = currentTarget;
         }
-        else
+
+        if (currentTarget != null && currentTarget.IsDead)
         {
-            ChangeAnim(Const.ANIM_IDLE);
+            ResetTarget();
         }
     }
-    
-    public void ChangeSkin()
+
+    //goi khi win game
+    IEnumerator DelayChangeAnim()
     {
-        ChangeWeapon(WeaponType.Arrow);
-        ChangeHat(HairType.Hat);
-        ChangePant(PantType.Batman);
-        ChangeShield(ShieldType.Shield_1);
+        yield return Cache.GetWFS(0.8f);
+        ChangeAnim(Constants.ANIM_WIN);
     }
 }
