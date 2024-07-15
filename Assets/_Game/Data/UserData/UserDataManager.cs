@@ -215,13 +215,11 @@ public class UserData
         coin = 50000;
         levelNumber = 1;
         name = "YOU";
-
         weaponState = new List<int>() { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         hatState = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         pantState = new List<int>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
         shieldState = new List<int>() { 0, 0, 0 };
         setFullState = new List<int>() { 0, 0, 0, 0, 0, 0 };
-
         currentWeaponIndex = 0;
         currentHatIndex = hatState.Count - 1;
         currentPantIndex = pantState.Count - 1;

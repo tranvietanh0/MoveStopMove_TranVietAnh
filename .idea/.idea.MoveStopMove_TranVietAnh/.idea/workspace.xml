@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d58c661f-0a1c-4cd0-8527-1178f8fe6d19" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MoveStopMove_TranVietAnh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/PatrolState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Character/IState/PatrolState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UISetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UISetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UISkinShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/UISkinShop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a561a7db8e9743a3bc8cbf5e3d8fa6523600/5a/96d938b5/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -94,7 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1720840166591</updated>
       <workItem from="1720840169352" duration="1799000" />
-      <workItem from="1720880604058" duration="2799000" />
+      <workItem from="1720880604058" duration="3770000" />
+      <workItem from="1721045510868" duration="1119000" />
     </task>
     <servers />
   </component>

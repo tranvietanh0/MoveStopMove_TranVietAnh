@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class PatrolState : IState
 {
-    public void OnEnter(Enemy enemy)
+    public void OnEnter(Enemy t)
     {
-        enemy.ChangeAnim(Constants.ANIM_RUN);
-        Vector3 destination = enemy.GetRandomPoint();
-        enemy.SetDestination(destination);
+        t.ChangeAnim(Constants.ANIM_RUN);
+        Vector3 destination = t.GetRandomPoint();
+        t.SetDestination(destination);
     }
 
-    public void OnExecute(Enemy enemy)
+    public void OnExecute(Enemy t)
     {
-        if (enemy.IsDead)
+        if (t.IsDead)
         {
             return;
         }
 
-        if (enemy.IsDestination)
+        if (t.IsDestination)
         {
-            enemy.IsMoving = false;
-            enemy.ChangeState(new IdleState());
+            t.IsMoving = false;
+            t.ChangeState(new IdleState());
         }
     }
 
-    public void OnExit(Enemy enemy)
+    public void OnExit(Enemy t)
     {
         
     }

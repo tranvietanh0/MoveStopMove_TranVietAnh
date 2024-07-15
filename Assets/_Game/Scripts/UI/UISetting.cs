@@ -48,7 +48,7 @@ public class UISetting : UICanvas
         UpdateButtonIcon();
     }
 
-    //xu ly bat-tat vibration
+    //xu ly bat tat vibration
     private void OnVibraBtnPress()
     {
         bool vibrated = PlayerPrefs.GetInt(Constants.P_PREF_VIBRATED, 0) == 1;

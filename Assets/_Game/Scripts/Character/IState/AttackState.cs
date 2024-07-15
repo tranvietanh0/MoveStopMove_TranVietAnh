@@ -8,17 +8,17 @@ public class AttackState : IState
     private float     timer;
     private float     delayTime;
 
-    public void OnEnter(Enemy enemy)
+    public void OnEnter(Enemy t)
     {
-        enemy.ChangeAnim(Constants.ANIM_ATTACK);
-        target = enemy.GetTarget(); //lay muc tieu
+        t.ChangeAnim(Constants.ANIM_ATTACK);
+        target = t.GetTarget(); //lay muc tieu
         timer = 0;
         delayTime = Random.Range(1, 4);
     }
 
-    public void OnExecute(Enemy enemy)
+    public void OnExecute(Enemy t)
     {
-        if (enemy.IsDead)
+        if (t.IsDead)
         {
             return;
         }
@@ -27,17 +27,17 @@ public class AttackState : IState
 
         if (target != null)
         {
-            enemy.Attack(target);
+            t.Attack(target);
         }
 
         if (timer >= delayTime)
         {
-            enemy.IsMoving = true;
-            enemy.ChangeState(new PatrolState());
+            t.IsMoving = true;
+            t.ChangeState(new PatrolState());
         }
     }
 
-    public void OnExit(Enemy enemy)
+    public void OnExit(Enemy t)
     {
 
     }

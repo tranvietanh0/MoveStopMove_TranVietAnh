@@ -7,35 +7,35 @@ public class IdleState : IState
     private float randomTime;
     private float timer;
 
-    public void OnEnter(Enemy enemy)
+    public void OnEnter(Enemy t)
     {
-        enemy.ChangeAnim(Constants.ANIM_IDLE);
+        t.ChangeAnim(Constants.ANIM_IDLE);
         randomTime = Random.Range(1, 4);
         timer = 0f;
     }
 
-    public void OnExecute(Enemy enemy)
+    public void OnExecute(Enemy t)
     {
         timer += Time.deltaTime;
-        if (enemy.IsDead)
+        if (t.IsDead)
         {
             return;
         }
 
-        if (enemy.GetTarget() != null && !enemy.IsOutOfAttackRange(enemy.GetTarget()))
+        if (t.GetTarget() != null && !t.IsOutOfAttackRange(t.GetTarget()))
         {
-            enemy.ChangeState(new AttackState());
+            t.ChangeState(new AttackState());
 
         }
 
         else if (timer >= randomTime)
         {
-            enemy.ChangeState(new PatrolState());
+            t.ChangeState(new PatrolState());
 
         }
     }
 
-    public void OnExit(Enemy enemy)
+    public void OnExit(Enemy t)
     {
 
     }

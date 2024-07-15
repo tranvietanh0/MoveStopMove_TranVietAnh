@@ -175,6 +175,7 @@ public class UISkinShop : UICanvas
     }
 
     //xu ly buy button
+    
     private void OnBuyBtn()
     {
         int itemIndex = currentSelectedItem.GetItemIndex();
